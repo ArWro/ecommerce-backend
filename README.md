@@ -23,4 +23,4 @@ It provides a REST API, integrates with PostgreSQL, uses Flyway for database mig
 
 ---
 
-MIT License © 2025 Artur Wróblewski
+MIT License © 2025 Artur Wróblewski 

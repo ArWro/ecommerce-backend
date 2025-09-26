@@ -12,7 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/categories")
+@RequestMapping("/category")
 @RequiredArgsConstructor
 public class CategoryController {
 
@@ -31,7 +31,7 @@ public class CategoryController {
     @PostMapping
     public ResponseEntity<CategoryDto> create(@Valid @RequestBody CreateCategoryRequest request) {
         CategoryDto created = service.create(request);
-        return ResponseEntity.created(URI.create("/api/categories/" + created.getId())).body(created);
+        return ResponseEntity.created(URI.create("/category/" + created.getId())).body(created);
     }
 
     @PutMapping("/{id}")

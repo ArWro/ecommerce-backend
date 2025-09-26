@@ -12,7 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductController {
 
@@ -31,7 +31,7 @@ public class ProductController {
     @PostMapping
     public ResponseEntity<ProductDto> create(@Valid @RequestBody CreateProductRequest request) {
         ProductDto created = service.create(request);
-        return ResponseEntity.created(URI.create("/api/products/" + created.getId())).body(created);
+        return ResponseEntity.created(URI.create("/product/" + created.getId())).body(created);
     }
 
     @PutMapping("/{id}")

@@ -1,5 +1,6 @@
 package pl.arwro.ecommerce.category;
 
+import pl.arwro.ecommerce.product.Product;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "categories")
+@Table(name = "category")
 public class Category {
 
     @Id
@@ -27,5 +28,5 @@ public class Category {
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = false)
     @Builder.Default
-    private List<pl.arwro.ecommerce.product.Product> products = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
 }

@@ -1,4 +1,4 @@
-# 🛒 E-commerce Backend
+# 🛒 E-commerce Backend (in progress)
 
 ![CI](https://github.com/ArWro/ecommerce-backend/actions/workflows/ci.yml/badge.svg)
 
